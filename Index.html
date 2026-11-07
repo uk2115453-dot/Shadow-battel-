@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow Battle</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #090014, #16002b, #001b33);
+      color: white;
+      text-align: center;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 10px 0;
+      color: #00eaff;
+      text-shadow: 0 0 20px #00eaff;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    .game-box {
+      width: 90%;
+      max-width: 600px;
+      padding: 30px;
+      border: 2px solid #00eaff;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.55);
+      box-shadow: 0 0 30px rgba(0, 234, 255, 0.4);
+    }
+
+    button {
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .play {
+      background: #00eaff;
+      color: #001018;
+      box-shadow: 0 0 20px #00eaff;
+    }
+
+    .play:hover {
+      transform: scale(1.05);
+    }
+
+    .freefire {
+      background: #ff9d00;
+      color: black;
+    }
+
+    .info {
+      margin-top: 25px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #00ff88;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hero">
+    <div class="game-box">
+
+      <h1>⚔️ SHADOW BATTLE ⚔️</h1>
+
+      <p class="subtitle">
+        Enter the Shadow. Fight. Survive. Become the Champion.
+      </p>
+
+      <button class="play" onclick="startGame()">
+        🎮 PLAY NOW
+      </button>
+
+      <button class="freefire"
+        onclick="window.open('https://ff.garena.com/', '_blank')">
+        🔥 FREE FIRE
+      </button>
+
+      <div id="message"></div>
+
+      <p class="info">
+        Shadow Battle is a gaming website created for fun.
+      </p>
+
+    </div>
+  </div>
+
+  <script>
+    function startGame() {
+      document.getElementById("message").innerHTML =
+        "🔥 Shadow Battle starting... Get ready! 🔥";
+    }
+  </script>
+
+</body>
+</html>
